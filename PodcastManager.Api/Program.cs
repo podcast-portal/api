@@ -20,5 +20,5 @@ var app = builder
 app
     .SetUp();
 
-app.Urls.Add("http://*:5555");
+app.Urls.Add("http://host.docker.internal:5555");
 app.Run();
