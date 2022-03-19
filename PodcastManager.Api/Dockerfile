@@ -1,4 +1,8 @@
 ﻿FROM mcr.microsoft.com/dotnet/sdk:6.0 AS sdk
+
+EXPOSE 80
+EXPOSE 5555
+
 WORKDIR /app
 
 COPY ./ ./
