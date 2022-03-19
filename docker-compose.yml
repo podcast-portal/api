@@ -7,11 +7,14 @@ services:
       MongoUrl: ${MONGO_URL}
       RabbitUrl: ${RABBIT_URL}
     ports:
-      - "5555:5000"
+      - "5555:5555"
     networks:
       - backend
     deploy:
       mode: global
+      placement:
+        constraints:
+          - node.role == manager
 
 networks:
   backend:
