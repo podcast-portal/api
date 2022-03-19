@@ -6,6 +6,7 @@ services:
     environment:
       MongoUrl: ${MONGO_URL}
       RabbitUrl: ${RABBIT_URL}
+      ListenUrl: ${API_URL}
     ports:
       - "5555:5555"
     networks:
