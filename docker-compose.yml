@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  updater:
+    image: "menoncello/podcast-manager.api"
+    environment:
+      MongoUrl: ${MONGO_URL}
+      RabbitUrl: ${RABBIT_URL}
+    ports:
+      - "5555:5000"
+    networks:
+      - backend
+    deploy:
+      mode: global
+
+networks:
+  backend:
+    external: true
