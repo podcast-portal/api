@@ -1,6 +1,7 @@
 using PodcastManager.Api.CrossCutting.Rabbit;
 using PodcastManager.Api.Definitions;
 using RabbitMQ.Client;
+using Serilog;
 
 namespace PodcastManager.Api;
 
