@@ -7,6 +7,6 @@ var app = builder
     .Build();
 
 app.SetUp();
- 
-app.Urls.Add(Configuration.ListenUrl);
+
+app.Urls.Add("http://*:5555");
 app.Run();
