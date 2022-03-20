@@ -1,7 +1,7 @@
 version: '3.7'
 
 services:
-  updater:
+  server:
     image: "menoncello/podcast-manager.api"
     environment:
       MongoUrl: ${MONGO_URL}

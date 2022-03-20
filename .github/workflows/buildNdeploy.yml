@@ -60,5 +60,5 @@ jobs:
           export MONGO_URL="${{ secrets.MONGO_URL }}"
           export RABBIT_URL="${{ secrets.RABBIT_URL }}"
           export API_URL="${{ secrets.API_URL }}"
-          docker stack deploy --compose-file /home/deployer/PodcastManager.Api/docker-compose.yml podcast-api
+          docker stack deploy --compose-file /home/deployer/PodcastManager.Api/docker-compose.yml api
           rm -rf /home/deployer/PodcastManager.Api
