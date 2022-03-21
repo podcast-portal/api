@@ -11,15 +11,9 @@ services:
       - target: 80
         published: 5555
         mode: host
-    networks:
-      - backend
     deploy:
       mode: replicated
       replicas: 1
       placement:
         constraints:
           - node.role == manager
-
-networks:
-  backend:
-    external: true
