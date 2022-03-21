@@ -8,9 +8,10 @@ services:
       RabbitUrl: ${RABBIT_URL}
       ListenUrl: ${API_URL}
     ports:
-      - target: 80
-        published: 5555
+      - published: 5555
+        target: 80
         mode: host
+        protocol: tcp
     networks:
       - caddy_default
     deploy:
