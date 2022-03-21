@@ -8,7 +8,9 @@ services:
       RabbitUrl: ${RABBIT_URL}
       ListenUrl: ${API_URL}
     ports:
-      - "5555:80"
+      - target: 80
+        published: 5555
+        mode: host
     networks:
       - backend
     deploy:
