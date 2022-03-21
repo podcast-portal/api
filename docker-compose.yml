@@ -11,9 +11,15 @@ services:
       - target: 80
         published: 5555
         mode: host
+    networks:
+      - caddy_default
     deploy:
       mode: replicated
       replicas: 1
       placement:
         constraints:
           - node.role == manager
+
+networks:
+  caddy_default:
+    external: true
